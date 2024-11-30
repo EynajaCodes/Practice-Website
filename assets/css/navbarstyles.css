@@ -1,0 +1,39 @@
+@import url("/assets/css/styles.css");
+@import url("/assets/css/aboutstyles.css");
+
+
+#nav{
+  grid-area: nav;
+  position: fixed;
+  top: 80px; /* Positioning it right below the header */
+  left: 0;
+  right: 0;
+  z-index: 100; /* Ensures it stays on top of other elements */
+  background-color: white; /* Optional: gives it a background */
+  padding: 10px 0; /* Optional: adds some padding */
+}
+
+.navbar{grid-area: nav;
+    display:block;
+    position: fixed;
+color: gold;
+list-style-type: none;
+font-size: larger;
+}
+
+  ul li {
+    font-size: 20px;
+    display: inline;
+    list-style-type: none;
+    float:inline;
+    border: .2em dotted gold;
+    background-color: darkred;
+    color: gold;
+    width:100%;
+  }
+  
+  a{color: gold;
+
+
+  }
+ 

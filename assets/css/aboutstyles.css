@@ -1,0 +1,35 @@
+@import url("/assets/css/styles.css");
+@import url("/assets/css/navbarstyles.css");
+
+#about{
+    grid-area: main;
+    display: flexbox;
+    flex-direction: column;
+    height: 900px;
+    width:600px;
+    border: 2px dotted goldenrod;
+    background-color: darkred;
+    align-self: center;
+
+
+}
+#nav{
+justify-self: ;
+
+}
+
+#about img{ 
+    width:fit-content;
+    max-height: 50%;
+    max-width: 75%;
+    
+    padding: none;
+    margin: 1em;
+    border: dotted goldenrod 2px;
+
+
+}
+
+#about p{color: goldenrod;
+background-color: darkblue;
+border: 2px dotted gold;}
