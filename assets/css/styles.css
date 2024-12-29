@@ -3,13 +3,19 @@
 
 body{display:grid;
 grid-template-areas: 
-"hd hd hd"
-"sd main main"
-"ft ft ft";
+"hd hd hd hd"
+"hd hd hd hd"
+"hd hd hd hd"
+"sd main main main"
+"sd main main main"
+"sd main main main"
+"sd main main main"
+"ft ft ft ft";
 grid-auto-columns:2fr;
-grid-auto-rows: 1fr;
-grid-gap:.1em;
-padding: .1em;
+grid-auto-rows: 3fr;
+grid-gap:none;
+padding: none;
+grid-gap:none;
 background-image: url("/assets/images/wallpapersden.com_my-hero-academia-all-might_2560x1440.jpg");
 }
 
@@ -33,6 +39,23 @@ font-weight: bolder;
 
 
 }
+
+.tweepcontainer img{
+    
+    object-fit: contain;
+    display:flex;
+    border: dotted gold .01em;
+    padding:none;
+    margin: none;
+    height:50px;
+    autowidth:50px;
+
+    justify-self: flex-end;
+
+
+}
+
+
 html {cursor: url("/assets/images/cursor.cur"), default;
     
 
@@ -62,7 +85,10 @@ margin: 1em;
 padding: 1em;
 
 }
+link:hover{
+    cursor: url("/assets/images/cursor (1).cur"), default;
 
+}
 
 .Announce{ 
     display:flex;
@@ -71,4 +97,52 @@ padding: 1em;
 
 
 
+}
+h3{align-self: center;
+    color: solid gold;
+
+}
+
+
+
+
+
+
+/*large phone screens styles*/
+
+
+@media screen {  min-width: 600px;
+    body{
+display:grid;
+grid-template-areas: "hd hd"
+"hd hd"
+"sd sd"
+"main main"
+"ft ft";
+
+grid-auto-columns: 2fr;
+grid-auto-rows: 3fr;
+background-color: blue;
+
+    };
+    
+}
+
+@media screen { 
+
+    max-width: 600px;
+
+    body{
+        display:grid;
+        grid-template-areas: "hd hd"
+        "hd hd"
+        "sd sd"
+        "main main"
+        "ft ft";
+        
+        grid-auto-columns: 2fr;
+        grid-auto-rows: 3fr;
+        background-color: blue;
+        
+            };
 }
