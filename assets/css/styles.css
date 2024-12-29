@@ -111,7 +111,7 @@ h3{align-self: center;
 /*large phone screens styles*/
 
 
-@media screen {  min-width: 600px;
+@media screen {  max-width: 600px;
     body{
 display:grid;
 grid-template-areas: "hd hd"
@@ -128,21 +128,3 @@ background-color: blue;
     
 }
 
-@media screen { 
-
-    max-width: 600px;
-
-    body{
-        display:grid;
-        grid-template-areas: "hd hd"
-        "hd hd"
-        "sd sd"
-        "main main"
-        "ft ft";
-        
-        grid-auto-columns: 2fr;
-        grid-auto-rows: 3fr;
-        background-color: blue;
-        
-            };
-}
