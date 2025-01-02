@@ -1,8 +1,7 @@
 @import url("/assets/css/styles.css");
 @import url("/assets/css/aboutstyles.css");
 
-
-#nav{
+#nav {
   grid-area: nav;
   position: fixed;
   top: 80px; /* Positioning it right below the header */
@@ -10,30 +9,47 @@
   right: 0;
   z-index: 100; /* Ensures it stays on top of other elements */
   background-color: white; /* Optional: gives it a background */
-  padding: 10px 0; /* Optional: adds some padding */
+  padding: none; /* Optional: adds some padding */
 }
 
-.navbar{grid-area: nav;
-    display:block;
-    position: fixed;
-color: gold;
-list-style-type: none;
-font-size: larger;
+.navbar {
+  grid-area: nav;
+  display: block;
+  position: fixed;
+  color: gold;
+  list-style-type: none;
+  font-size: larger;
+  transition: background 0.4s ease-in, transform 0.3s 0.5s ease-in-out,
+    border-radius 0.4s ease-in;
 }
 
-  ul li {
-    font-size: 20px;
-    display: inline;
-    list-style-type: none;
-    float:inline;
-    border: .2em dotted gold;
-    background-color: darkred;
-    color: gold;
-    width:100%;
-  }
-  
-  a{color: gold;
+ul li {
+  font-size: 20px;
+  display: inline;
+  list-style-type: none;
+  float: inline;
+  border: 0.2em dotted gold;
+  background-color: darkred;
+  color: gold;
+  width: 100%;
+}
 
+#nav ul li:hover {
+  transform: scale(5);
+  background: black;
+  color: gold;
+  border-radius: 15px;
+}
 
-  }
- 
+a {
+  color: gold;
+}
+a:hover {
+  cursor: url("/assets/images/cursor (2).cur"), default;
+}
+
+.clickedlink {
+  background-color: darkblue;
+  color: gold;
+  border: 0.2em dotted red;
+}

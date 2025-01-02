@@ -1,0 +1,9 @@
+@import url("/assets/css/styles.css");
+
+#merchstore {
+  grid-area: main;
+  border: 2px dotted gold;
+  background-color: black;
+  height: 80%;
+  width: 60%;
+}

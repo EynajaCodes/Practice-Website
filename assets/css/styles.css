@@ -1,70 +1,69 @@
 @import url("/assets/css/navbarstyles.css");
 @import url("/assets/css/aboutstyles.css");
+@import url("/assets/css/animation.css");
+@import url("/assets/css/query.css");
+@import url("assets/css/merchpagestyles.css"); /* Importing other stylesheets to the main stylesheet that will be attached to index.html */
 
-body{display:grid;
-grid-template-areas: 
-"hd hd hd hd"
-"hd hd hd hd"
-"hd hd hd hd"
-"sd main main main"
-"sd main main main"
-"sd main main main"
-"sd main main main"
-"ft ft ft ft";
-grid-auto-columns:2fr;
-grid-auto-rows: 3fr;
-grid-gap:none;
-padding: none;
-grid-gap:none;
-background-image: url("/assets/images/wallpapersden.com_my-hero-academia-all-might_2560x1440.jpg");
+body {
+  /* setting up grid template for all pages*/
+  display: grid;
+  grid-template-areas:
+    "hd hd hd hd"
+    "hd hd hd hd"
+    "hd hd hd hd"
+    "sd main main main"
+    "sd main main main"
+    "sd main main main"
+    "sd main main main"
+    "ft ft ft ft";
+  grid-auto-columns: 2fr;
+  grid-auto-rows: 3fr;
+  gap: 0;
+  padding: 3pxpx;
+  grid-gap: 0;
+  margin: 0;
+  border: none;
+
+  background-image: url("/assets/images/wallpapersden.com_my-hero-academia-all-might_2560x1440.jpg");
 }
 
-header{grid-area: hd;
-    position: fixed;
-    font-size: 56px;
-    color:gold;
-text-align: center;
-font-weight: bolder;
+header {
+  grid-area: hd;
+  position: fixed;
+  font-size: 56px;
+  color: gold;
+  text-align: center;
+  font-weight: bolder;
+  margin: none;
 }
 
-
-.tweepcontainer{
-    grid-area: sd;
-    display: flex;
-    background-color: white;
-    border: 3px solid goldenrod;
-    margin: 2em;
-    padding: 1em;
-
-
-
+.tweepcontainer {
+  grid-area: sd;
+  display: flex;
+  background-color: white;
+  border: 3px solid goldenrod;
+  margin: 2em;
+  padding: 1em;
 }
 
-.tweepcontainer img{
-    
-    object-fit: contain;
-    display:flex;
-    border: dotted gold .01em;
-    padding:none;
-    margin: none;
-    height:50px;
-    autowidth:50px;
+.tweepcontainer img {
+  object-fit: contain;
+  display: flex;
+  border: dotted gold 0.01em;
+  padding: none;
+  margin: none;
+  height: 50px;
+  autowidth: 50px;
 
-    justify-self: flex-end;
-
-
+  justify-self: flex-end;
 }
 
-
-html {cursor: url("/assets/images/cursor.cur"), default;
-    
-
+html {
+  cursor: url("/assets/images/cursor.cur"), default;
 }
 
-html:hover{ 
-    cursor: url("/assets/images/cursor (1).cur"), default;
-
-
+.button:hover {
+  cursor: url("/assets/images/AllMightFLEX.cur"), default;
 }
 
 /*.navbar{
@@ -76,55 +75,55 @@ html:hover{
     height: 80px;
 }*/
 
-
-
-
-#announcementbox{
-grid-area: main;
-margin: 1em;
-padding: 1em;
-
-}
-link:hover{
-    cursor: url("/assets/images/cursor (1).cur"), default;
-
+#announcementbox {
+  grid-area: main;
+  margin: 1em;
+  padding: 1em;
 }
 
-.Announce{ 
-    display:flex;
-    background-color: whitesmoke;
-    border: 2px solid goldenrod;
-
-
-
+.Announce {
+  display: flex;
+  background-color: whitesmoke;
+  border: 2px solid goldenrod;
 }
-h3{align-self: center;
-    color: solid gold;
-
+h3 {
+  align-self: center;
+  color: solid gold;
 }
 
+@keyframes /* Setting up page transitions */
+transitionforward {
+  from {
+    opacity: 0;
+    transform: rotate3d(0, 1, 0, 60deg);
+    background-image: url("/assets/images/WavingAllMight-1499892508024_160w.jpg");
+  }
 
+  to {
+    opacity: 1;
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
 
-
-
+body:not(#nav) {
+  animation: transitionforward 0.5s;
+}
 
 /*large phone screens styles*/
 
+@media screen {
+  max-width: 600px;
+  body {
+    display: grid;
+    grid-template-areas:
+      "hd hd"
+      "hd hd"
+      "sd sd"
+      "main main"
+      "ft ft";
 
-@media screen {  max-width: 600px;
-    body{
-display:grid;
-grid-template-areas: "hd hd"
-"hd hd"
-"sd sd"
-"main main"
-"ft ft";
-
-grid-auto-columns: 2fr;
-grid-auto-rows: 3fr;
-background-color: blue;
-
-    };
-    
+    grid-auto-columns: 2fr;
+    grid-auto-rows: 3fr;
+    background-color: blue;
+  }
 }
-
