@@ -1,35 +1,33 @@
-
-
-@import url("/assets/css/styles.css");
 @import url("/assets/css/navbarstyles.css");
 @import url("/assets/css/aboutstyles.css");
+@import url("/assets/css/animation.css");
+@import url("/assets/css/query.css");
+@import url("assets/css/merchpagestyles.css"); /* Importing other stylesheets to the main stylesheet that will be attached to index.html */
 
-
-body{
-    display:grid;
-    grid-template-areas: 
+body {
+  display: grid;
+  grid-template-areas:
     "hd hd hd hd"
     "sd main main main"
     "sd main main main"
     "sd main main main"
     "sd main main main"
     "ft ft ft ft";
-    grid-auto-columns:2fr;
-    grid-auto-rows: 3fr;
-background-image: url("/assets/images/w77579qot1n11.jpg");
-
+  grid-auto-columns: 2fr;
+  grid-auto-rows: 3fr;
+  background-image: url("/assets/images/w77579qot1n11.jpg");
 }
 
-.myForm{grid-area: main;
-    justify-self: self-start;
-    border: dotted gold 2px;
-    display:flex;
-    flex-direction: row;
-
-
-
+.myForm {
+  grid-area: main;
+  justify-self: self-start;
+  border: dotted gold 2px;
+  display: flex;
+  flex-direction: row;
 }
 
-button{ border: solid gold .5em;
-color:gold;
-background-color: black;}
+button {
+  border: solid gold 0.5em;
+  color: gold;
+  background-color: black;
+}

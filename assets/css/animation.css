@@ -1,2 +1,23 @@
-@import url("/assets/css/styles.css");
+@import url("/assets/css/navbarstyles.css");
 @import url("/assets/css/aboutstyles.css");
+@import url("/assets/css/animation.css");
+@import url("/assets/css/query.css");
+@import url("assets/css/merchpagestyles.css"); /* Importing other stylesheets to the main stylesheet that will be attached to index.html */
+
+@keyframes /* Setting up page transitions */
+transitionforward {
+  from {
+    opacity: 0;
+    transform: rotate3d(0, 1, 0, 60deg);
+    background-image: url("/assets/images/WavingAllMight-1499892508024_160w.jpg");
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+
+body:not(#nav) {
+  animation: transitionforward 0.5s;
+}

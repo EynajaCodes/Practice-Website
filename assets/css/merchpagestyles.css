@@ -1,9 +1,41 @@
 @import url("/assets/css/styles.css");
 
+/*body {
+  display: grid;
+  grid-auto-columns: 200px;
+  grid-auto-rows: 400px;
+  grid-template-areas:
+    "hd hd hd hd"
+    "hd hd hd hd"
+    "sd sd main main"
+    "sd sd main main"
+    "sd sd main main"
+    "ft ft ft ft";
+}*/
+
+.cart {
+  grid-area: sd;
+  display: flexbox;
+  border: 2px solid black;
+  height: 0.5fr;
+  width: 0.2fr;
+}
+
 #merchstore {
   grid-area: main;
-  border: 2px dotted gold;
+  display: flexbox;
+  align-items: right;
+  justify-items: space-evenly;
+  height: 10%;
+  width: 30%;
   background-color: black;
-  height: 80%;
-  width: 60%;
+}
+
+.items {
+  grid-area: main;
+  content: contain;
+  height: 20px;
+  width: 50px;
+  padding: 2px;
+  border: 2px dotted goldenrod;
 }
